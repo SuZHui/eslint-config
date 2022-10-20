@@ -6,7 +6,7 @@
   "main": "index.js",
   "packageManager": "pnpm@7.13.4",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/SuZHui/eslint-config#readme",
   "devDependencies": {
+    "@suzhui/eslint-config": "workspace:*",
+    "eslint": "^8.25.0",
+    "eslint-plugin-suzhui": "workspace:*",
     "typescript": "^4.8.4"
   }
 }

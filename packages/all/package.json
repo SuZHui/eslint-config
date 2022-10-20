@@ -1,11 +1,11 @@
 {
-  "name": "@suzhui/eslint-config-basic",
+  "name": "@suzh/eslint-config",
   "version": "0.0.1",
-  "description": "",
+  "description": "SuZHui's ESLint config",
   "main": "index.js",
-  "scripts": {
-    "lint": "eslint  --config=index.js"
-  },
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "eslint-config"
   ],
