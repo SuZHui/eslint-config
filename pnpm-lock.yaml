@@ -4,12 +4,12 @@ importers:
 
   .:
     specifiers:
-      '@suzhui/eslint-config': workspace:*
+      '@suzh/eslint-config': workspace:0.0.1
       eslint: ^8.25.0
-      eslint-plugin-suzhui: workspace:*
+      eslint-plugin-suzhui: workspace:0.0.1
       typescript: ^4.8.4
     devDependencies:
-      '@suzhui/eslint-config': link:packages/all
+      '@suzh/eslint-config': link:packages/all
       eslint: 8.25.0
       eslint-plugin-suzhui: link:packages/eslint-plugin-suzhui
       typescript: 4.8.4

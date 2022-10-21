@@ -42,5 +42,3 @@ Product.subscribe((state) => {
     }
   }
 })
-
-var arr = ['foo', 'bar']
