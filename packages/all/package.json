@@ -6,6 +6,9 @@
   "files": [
     "index.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "eslint-config"
   ],
