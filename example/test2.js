@@ -112,7 +112,7 @@ export class WsCarousel extends HTMLElement {
   onResize = () => {
     if (this.ratio) {
       this.style.height = `${this.ratio * this.getBoundingClientRect().width
-        }px`
+      }px`
     }
   }
 

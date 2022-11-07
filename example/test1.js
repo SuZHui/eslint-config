@@ -2,7 +2,6 @@ import { findVariant, getFirstVariant, toVariant } from '@hotishop/utils'
 import { emit, page } from '@hotishop/global'
 import { Product } from '@hotishop/product'
 
-
 // 页面进入时获取url中的变种id参数
 const queryVariantId = new URLSearchParams(location.search).get('variant')
 const rawP = page.payload.product

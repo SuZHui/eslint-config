@@ -21,7 +21,6 @@
   "devDependencies": {
     "@suzh/eslint-config": "workspace:0.0.1",
     "eslint": "^8.25.0",
-    "eslint-plugin-suzhui": "workspace:0.0.1",
     "typescript": "^4.8.4"
   }
 }
