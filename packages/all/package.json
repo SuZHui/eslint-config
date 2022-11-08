@@ -2,6 +2,11 @@
   "name": "@suzh/eslint-config",
   "version": "0.0.1",
   "description": "SuZHui's ESLint config",
+  "author": "Su ZhenHui <szh362680581@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "eslint-config"
+  ],
   "main": "index.js",
   "files": [
     "index.js"
@@ -9,15 +14,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": [
-    "eslint-config"
-  ],
-  "author": "Su ZhenHui <szh362680581@gmail.com>",
-  "license": "MIT",
+  "dependencies": {
+    "eslint-plugin-jsonc": "^2.5.0",
+    "eslint-plugin-unicorn": "^44.0.2",
+    "jsonc-eslint-parser": "^2.1.0"
+  },
   "devDependencies": {
     "eslint": "^8.25.0"
-  },
-  "dependencies": {
-    "eslint-plugin-unicorn": "^44.0.2"
   }
 }

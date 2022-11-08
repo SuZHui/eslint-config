@@ -1,23 +1,23 @@
 {
   "name": "@suzh/eslint-config-monorepo",
   "version": "0.0.1",
+  "packageManager": "pnpm@7.13.4",
   "description": "SuZHui's ESLint config presets",
   "author": "Su ZhenHui <szh362680581@gmail.com>",
-  "main": "index.js",
-  "packageManager": "pnpm@7.13.4",
-  "scripts": {
-    "lint": "eslint ."
-  },
+  "license": "MIT",
+  "homepage": "https://github.com/SuZHui/eslint-config#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SuZHui/eslint-config.git"
   },
-  "keywords": [],
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/SuZHui/eslint-config/issues"
   },
-  "homepage": "https://github.com/SuZHui/eslint-config#readme",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
   "devDependencies": {
     "@suzh/eslint-config": "workspace:0.0.1",
     "eslint": "^8.25.0",
