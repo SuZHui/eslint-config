@@ -1,0 +1,26 @@
+{
+  "name": "@suzh/eslint-config-typescript",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Su ZhenHui <szh362680581@gmail.com>",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0"
+  }
+}

@@ -1,3 +1,4 @@
+/** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
   env: {
     es6: true,
@@ -5,7 +6,8 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:jsonc/recommended-with-jsonc'
+    '@suzh/eslint-config-typescript',
+    'plugin:jsonc/recommended-with-jsonc',
   ],
   ignorePatterns: [
     '*.min.*',
@@ -35,7 +37,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
-    'unicorn'
+    'unicorn',
   ],
   overrides: [
     {
@@ -118,10 +120,10 @@ module.exports = {
               'require',
               'import',
             ],
-          }
-        ]
-      }
-    }
+          },
+        ],
+      },
+    },
   ],
   rules: {
     'array-bracket-spacing': ['error', 'never'],
@@ -211,5 +213,5 @@ module.exports = {
     'unicorn/prefer-type-error': 'error',
     // Use new when throwing error
     'unicorn/throw-new-error': 'error',
-  }
+  },
 }
