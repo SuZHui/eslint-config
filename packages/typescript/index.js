@@ -1,7 +1,16 @@
-/** @type {import('eslint').ESLint.ConfigData} */
+/** @type {import('eslint').ESLint.Override} */
 module.exports = {
+  files: ['*.ts?(x)'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+    ecmaFeatures: { jsx: true },
+
+    // typescript-eslint specific options
+    warnOnUnsupportedTypeScriptVersion: true,
+  },
   extends: [
-    // '@suzh/eslint-config-basic',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
   ],

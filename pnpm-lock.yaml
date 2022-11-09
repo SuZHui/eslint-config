@@ -14,6 +14,7 @@ importers:
 
   packages/all:
     specifiers:
+      '@suzh/eslint-config-basic': workspace:^0.0.1
       '@suzh/eslint-config-typescript': workspace:^0.0.1
       eslint: ^8.25.0
       eslint-plugin-import: ^2.26.0
@@ -21,6 +22,7 @@ importers:
       eslint-plugin-unicorn: ^44.0.2
       jsonc-eslint-parser: ^2.1.0
     dependencies:
+      '@suzh/eslint-config-basic': link:../basic
       '@suzh/eslint-config-typescript': link:../typescript
       eslint-plugin-import: 2.26.0_eslint@8.25.0
       eslint-plugin-jsonc: 2.5.0_eslint@8.25.0
