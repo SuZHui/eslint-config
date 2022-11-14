@@ -19,7 +19,7 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@suzh/eslint-config": "workspace:0.0.1",
+    "@suzh/eslint-config": "workspace:0.0.2",
     "eslint": "^8.27.0",
     "typescript": "^4.8.4"
   }
