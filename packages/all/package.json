@@ -18,8 +18,9 @@
     "eslint": ">=7.4.0"
   },
   "dependencies": {
-    "@suzh/eslint-config-basic": "workspace:^0.0.2",
-    "@suzh/eslint-config-typescript": "workspace:^0.0.2",
+    "@suzh/eslint-config-basic": "workspace:*",
+    "@suzh/eslint-config-ecmascript": "workspace:*",
+    "@suzh/eslint-config-typescript": "workspace:*",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsonc": "^2.5.0",
     "eslint-plugin-unicorn": "^44.0.2",

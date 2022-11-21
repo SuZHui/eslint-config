@@ -9,16 +9,14 @@
   "files": [
     "index.js"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "peerDependencies": {
     "eslint": ">=7.4.0",
     "typescript": ">=3.9"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1"
+    "@suzh/eslint-config-basic": "workspace:^0.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0"
   },
   "devDependencies": {
     "eslint": "^8.27.0"
