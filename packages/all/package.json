@@ -1,6 +1,6 @@
 {
   "name": "@suzh/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SuZHui's ESLint config",
   "author": "Su ZhenHui <szh362680581@gmail.com>",
   "license": "MIT",

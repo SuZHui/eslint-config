@@ -1,6 +1,6 @@
 {
   "name": "@suzh/eslint-config-monorepo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "packageManager": "pnpm@7.13.4",
   "description": "SuZHui's ESLint config presets",
