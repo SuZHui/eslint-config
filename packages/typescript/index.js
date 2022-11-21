@@ -1,8 +1,9 @@
-const basic = require('@suzh/eslint-config-basic')
+const ecmascript = require('@suzh/eslint-config-ecmascript')
 
 /** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
-  overrides: [...basic.overrides, {
+  ...ecmascript,
+  overrides: [...ecmascript.overrides, {
     files: ['*.ts?(x)'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -14,7 +15,6 @@ module.exports = {
       warnOnUnsupportedTypeScriptVersion: true,
     },
     extends: [
-      '@suzh/eslint-config-basic',
       'plugin:import/typescript',
       'plugin:@typescript-eslint/recommended',
     ],

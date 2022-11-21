@@ -4,7 +4,7 @@ const common = require('@suzh/eslint-config-common')
 module.exports = {
   ...common,
   overrides: [...common.overrides, {
-    files: ['*.js', '*.mjs'],
+    files: ['*.js?(x)', '*.mjs'],
     parserOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',

@@ -14,7 +14,7 @@
     "typescript": ">=3.9"
   },
   "dependencies": {
-    "@suzh/eslint-config-basic": "workspace:^0.0.3",
+    "@suzh/eslint-config-ecmascript": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "@typescript-eslint/parser": "^5.43.0"
   },
