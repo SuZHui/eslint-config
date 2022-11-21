@@ -1,6 +1,6 @@
 {
   "name": "@suzh/eslint-config",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0",
   "description": "SuZHui's ESLint config",
   "author": "Su ZhenHui <szh362680581@gmail.com>",
   "license": "MIT",
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@suzh/eslint-config-ecmascript": "workspace:*",
-    "@suzh/eslint-config-react": "workspace:^0.0.3",
+    "@suzh/eslint-config-react": "workspace:*",
     "@suzh/eslint-config-typescript": "workspace:*",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsonc": "^2.5.0",
