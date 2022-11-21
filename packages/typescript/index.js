@@ -1,4 +1,4 @@
-/** @type {import('eslint').ESLint.Override} */
+/** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
   files: ['*.ts?(x)'],
   parser: '@typescript-eslint/parser',

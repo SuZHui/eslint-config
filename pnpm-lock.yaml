@@ -45,6 +45,9 @@ importers:
     devDependencies:
       unbuild: 0.9.4
 
+  packages/react:
+    specifiers: {}
+
   packages/typescript:
     specifiers:
       '@typescript-eslint/eslint-plugin': ^5.42.1
