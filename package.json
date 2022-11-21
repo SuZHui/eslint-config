@@ -1,6 +1,6 @@
 {
   "name": "@suzh/eslint-config-monorepo",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "pnpm@7.13.4",
   "description": "SuZHui's ESLint config presets",
   "author": "Su ZhenHui <szh362680581@gmail.com>",
@@ -17,7 +17,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+    "release": "bumpp package.json packages/!common/package.json"
   },
   "devDependencies": {
     "@suzh/eslint-config": "workspace:0.0.2",
