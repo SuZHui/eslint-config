@@ -1,15 +1,14 @@
 {
-  "name": "@suzh/eslint-config-ecmascript",
+  "name": "@suzh/eslint-config-basic",
   "version": "1.0.1",
   "description": "",
   "author": "Su ZhenHui <szh362680581@gmail.com>",
   "license": "MIT",
   "keywords": [],
   "main": "index.js",
-  "peerDependencies": {
-    "eslint": ">=7.4.0"
-  },
   "dependencies": {
-    "@suzh/eslint-config-basic": "workspace:*"
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsonc": "^2.5.0",
+    "jsonc-eslint-parser": "^2.1.0"
   }
 }

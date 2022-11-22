@@ -1,9 +1,9 @@
-const common = require('@suzh/eslint-config-common')
+const basic = require('@suzh/eslint-config-basic')
 
 /** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
-  ...common,
-  overrides: [...common.overrides, {
+  ...basic,
+  overrides: [...basic.overrides, {
     files: ['*.js?(x)', '*.mjs'],
     parserOptions: {
       ecmaVersion: 2022,
