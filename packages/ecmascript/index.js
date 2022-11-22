@@ -13,11 +13,11 @@ module.exports = {
     rules: {
       'array-bracket-spacing': ['error', 'never'],
       'block-spacing': ['error', 'always'],
-      'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
+      'brace-style': ['error', '1tbs', { allowSingleLine: false }],
       'camelcase': 'off',
       'comma-spacing': ['error', { before: false, after: true }],
       'comma-style': ['error', 'last'],
-      'curly': ['error', 'multi-or-nest', 'consistent'],
+      'curly': ['error', 'all'],
       'func-call-spacing': ['off', 'never'],
       'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
       'key-spacing': ['error', { beforeColon: false, afterColon: true }],
@@ -71,7 +71,11 @@ module.exports = {
       'no-useless-escape': 'off',
       'no-void': 'error',
       'no-with': 'error',
-      'operator-linebreak': ['error', 'before'],
+      'operator-linebreak': [
+        'error',
+        'after',
+        { overrides: { '?': 'before', ':': 'before' } },
+      ],
       'require-await': 'off',
       'vars-on-top': 'error',
 
