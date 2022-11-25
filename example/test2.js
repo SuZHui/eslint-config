@@ -24,7 +24,7 @@ export class WsCarousel extends HTMLElement {
       lgSpaceBetween,
       autoHeight = 'false',
       adaptiveHeight = 'false',
-      useSlideColor,
+      useSlideColor
     } = this.dataset
 
     const mdSpace = mdSpaceBetween || spaceBetween
@@ -43,7 +43,7 @@ export class WsCarousel extends HTMLElement {
       if (this.firstImage) {
         loadImage(
           // 取第一个，不能取 currentSrc，因为可能是 1px
-          this.firstImage.dataset.srcset.replace(/\s+\d+w.+$/, ''),
+          this.firstImage.dataset.srcset.replace(/\s+\d+w.+$/, '')
         ).then((image) => {
           this.ratio = image.height / image.width
           this.onResize()
@@ -57,7 +57,7 @@ export class WsCarousel extends HTMLElement {
       modules: [
         window.Swiper.Autoplay,
         window.Swiper.Navigation,
-        window.Swiper.Pagination,
+        window.Swiper.Pagination
       ],
       autoplay:
         autoplay === 'true' && +interval !== 0
@@ -67,11 +67,11 @@ export class WsCarousel extends HTMLElement {
       loop: loop === 'true',
       navigation: {
         nextEl: this.querySelector('.swiper-button-next'),
-        prevEl: this.querySelector('.swiper-button-prev'),
+        prevEl: this.querySelector('.swiper-button-prev')
       },
       pagination: {
         el: this.querySelector('.swiper-pagination'),
-        clickable: true,
+        clickable: true
       },
       spaceBetween: +spaceBetween,
       slidesPerView: +pageSize,
@@ -80,14 +80,14 @@ export class WsCarousel extends HTMLElement {
         768: {
           spaceBetween: +mdSpace,
           slidesPerView: +mdSize,
-          slidesPerGroup: +mdPre,
+          slidesPerGroup: +mdPre
         },
         1024: {
           spaceBetween: +lgSpace,
           slidesPerView: +lgSize,
-          slidesPerGroup: +lgPre,
-        },
-      },
+          slidesPerGroup: +lgPre
+        }
+      }
     })
 
     if (useSlideColor === 'true') {

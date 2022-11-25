@@ -7,10 +7,11 @@ module.exports = {
     files: ['*.js?(x)', '*.mjs'],
     parserOptions: {
       ecmaVersion: 2022,
-      sourceType: 'module',
+      sourceType: 'module'
     },
     plugins: ['unicorn'],
     rules: {
+      'array-bracket-newline': ['error', 'consistent'],
       'array-bracket-spacing': ['error', 'never'],
       'block-spacing': ['error', 'always'],
       'brace-style': ['error', '1tbs', { allowSingleLine: false }],
@@ -36,7 +37,7 @@ module.exports = {
         'error',
         'DebuggerStatement',
         'LabeledStatement',
-        'WithStatement',
+        'WithStatement'
       ],
       'sort-imports': [
         'error',
@@ -45,24 +46,50 @@ module.exports = {
           ignoreCase: false,
           ignoreDeclarationSort: true,
           ignoreMemberSort: false,
-          memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        },
+          memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
+        }
       ],
       'space-before-function-paren': [
         'error',
         {
           anonymous: 'always',
           named: 'never',
-          asyncArrow: 'always',
-        },
+          asyncArrow: 'always'
+        }
       ],
 
       // best-practice
       'array-callback-return': 'error',
+      'arrow-parens': ['error', 'always'],
+      'arrow-spacing': 'error',
       'block-scoped-var': 'error',
-      'complexity': ['off', 11],
+      'complexity': ['error', 15],
       'consistent-return': 'off',
+      'comma-dangle': ['error', 'never'],
+      'default-case': ['error', { commentPattern: '^skip\\sdefault' }],
+      'eol-last': ['error', 'always'],
+      'dot-location': ['error', 'property'],
       'eqeqeq': ['error', 'smart'],
+      'getter-return': 'error',
+      'keyword-spacing': ['error', { before: true, after: true }],
+      'linebreak-style': 'error',
+      'max-classes-per-file': 'error',
+      'max-depth': ['error', { max: 4 }],
+      'max-len': [
+        'error',
+        {
+          code: 80,
+          ignoreComments: true,
+          ignoreRegExpLiterals: true,
+          ignoreStrings: true,
+          ignoreTemplateLiterals: true,
+          ignoreUrls: true,
+          tabWidth: 2
+        }
+      ],
+      'max-lines': ['error', { max: 300 }],
+      'max-lines-per-function': ['error', { max: 200 }],
+      'max-statements-per-line': ['error', { max: 1 }],
       'no-alert': 'warn',
       'no-case-declarations': 'error',
       'no-multi-spaces': 'error',
@@ -71,10 +98,24 @@ module.exports = {
       'no-useless-escape': 'off',
       'no-void': 'error',
       'no-with': 'error',
+      'no-caller': 'error',
+      'no-cond-assign': ['error', 'except-parens'],
+      'no-const-assign': 'error',
+      'no-constant-condition': ['error', { checkLoops: false }],
+      'no-control-regex': 'error',
+      'no-delete-var': 'error',
+      'no-dupe-args': 'error',
+      'no-dupe-class-members': 'error',
+      'no-dupe-keys': 'error',
+      'no-duplicate-case': 'error',
+      'no-empty-character-class': 'error',
+      'no-empty-pattern': 'error',
+      'no-eval': 'error',
+      'object-curly-newline': ['error', { consistent: true, multiline: true }],
       'operator-linebreak': [
         'error',
         'after',
-        { overrides: { '?': 'before', ':': 'before' } },
+        { overrides: { '?': 'before', ':': 'before' } }
       ],
       'require-await': 'off',
       'vars-on-top': 'error',
@@ -102,6 +143,8 @@ module.exports = {
       'unicorn/prefer-type-error': 'error',
       // Use new when throwing error
       'unicorn/throw-new-error': 'error',
-    },
+      // Enforces using an array literal instead of the Array constructor, but it still allows using the Array constructor with one argument. This rule fills that gap.
+      'unicorn/no-new-array': 'error'
+    }
   }]
 }

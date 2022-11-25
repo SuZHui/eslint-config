@@ -3,10 +3,10 @@ module.exports = {
   env: {
     es6: true,
     es2021: true,
-    node: true,
+    node: true
   },
   extends: [
-    'plugin:jsonc/recommended-with-jsonc',
+    'plugin:jsonc/recommended-with-jsonc'
   ],
   ignorePatterns: [
     '*.min.*',
@@ -24,16 +24,16 @@ module.exports = {
     '__snapshots__',
     '!.github',
     '!.vitepress',
-    '!.vscode',
+    '!.vscode'
   ],
   globals: {
     document: 'readonly',
     navigator: 'readonly',
-    window: 'readonly',
+    window: 'readonly'
   },
   parserOptions: {
     ecmaVersion: 2022,
-    sourceType: 'module',
+    sourceType: 'module'
   },
   overrides: [
     {
@@ -44,12 +44,18 @@ module.exports = {
         'jsonc/comma-dangle': ['error', 'never'],
         'jsonc/comma-style': ['error', 'last'],
         'jsonc/indent': ['error', 2],
-        'jsonc/key-spacing': ['error', { beforeColon: false, afterColon: true }],
+        'jsonc/key-spacing': [
+          'error',
+          {
+            beforeColon: false,
+            afterColon: true
+          }
+        ],
         'jsonc/no-octal-escape': 'error',
         'jsonc/object-curly-newline': ['error', { multiline: true, consistent: true }],
         'jsonc/object-curly-spacing': ['error', 'always'],
-        'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
-      },
+        'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }]
+      }
     },
     {
       files: ['package.json'],
@@ -102,23 +108,23 @@ module.exports = {
               'husky',
               'simple-git-hooks',
               'lint-staged',
-              'eslintConfig',
-            ],
+              'eslintConfig'
+            ]
           },
           {
             pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
-            order: { type: 'asc' },
+            order: { type: 'asc' }
           },
           {
             pathPattern: '^exports.*$',
             order: [
               'types',
               'require',
-              'import',
-            ],
-          },
-        ],
-      },
-    },
+              'import'
+            ]
+          }
+        ]
+      }
+    }
   ]
 }

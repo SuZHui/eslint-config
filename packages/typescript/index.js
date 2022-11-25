@@ -12,11 +12,11 @@ module.exports = {
       ecmaFeatures: { jsx: true },
 
       // typescript-eslint specific options
-      warnOnUnsupportedTypeScriptVersion: true,
+      warnOnUnsupportedTypeScriptVersion: true
     },
     extends: [
       'plugin:import/typescript',
-      'plugin:@typescript-eslint/recommended',
+      'plugin:@typescript-eslint/recommended'
     ],
     plugins: ['@typescript-eslint/eslint-plugin'],
     rules: {
@@ -40,8 +40,8 @@ module.exports = {
           functions: false,
           classes: false,
           variables: false,
-          typedefs: false,
-        },
+          typedefs: false
+        }
       ],
       'no-unused-expressions': 'off',
       '@typescript-eslint/no-unused-expressions': [
@@ -49,16 +49,16 @@ module.exports = {
         {
           allowShortCircuit: true,
           allowTernary: true,
-          allowTaggedTemplates: true,
-        },
+          allowTaggedTemplates: true
+        }
       ],
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
           args: 'none',
-          ignoreRestSiblings: true,
-        },
+          ignoreRestSiblings: true
+        }
       ],
       'no-useless-constructor': 'off',
       '@typescript-eslint/no-useless-constructor': 'error',
@@ -114,9 +114,9 @@ module.exports = {
           'TSTypeParameterInstantiation',
           'FunctionExpression > .params[decorators.length > 0]',
           'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
-          'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key',
+          'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key'
         ],
-        offsetTernaryExpressions: true,
+        offsetTernaryExpressions: true
       }],
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
@@ -126,8 +126,8 @@ module.exports = {
       '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
       'brace-style': 'off',
       '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: false }],
-      'comma-dangle': 'off',
-      '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+      // 'comma-dangle': 'off',
+      // '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
       'object-curly-spacing': 'off',
       '@typescript-eslint/object-curly-spacing': ['error', 'always'],
       'semi': 'off',
@@ -142,8 +142,8 @@ module.exports = {
         {
           anonymous: 'always',
           named: 'never',
-          asyncArrow: 'always',
-        },
+          asyncArrow: 'always'
+        }
       ],
       'space-infix-ops': 'off',
       '@typescript-eslint/space-infix-ops': 'error',
@@ -185,7 +185,7 @@ module.exports = {
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/ban-types': 'off',
       '@typescript-eslint/no-namespace': 'off',
-      '@typescript-eslint/triple-slash-reference': 'off',
-    },
-  }],
+      '@typescript-eslint/triple-slash-reference': 'off'
+    }
+  }]
 }

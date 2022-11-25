@@ -5,5 +5,5 @@ module.exports = {
     // '@suzh/eslint-config-ecmascript',
     '@suzh/eslint-config-typescript',
     '@suzh/eslint-config-react'
-  ],
+  ]
 }

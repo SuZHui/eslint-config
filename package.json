@@ -18,6 +18,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
+    "lint:fix": "pnpm run lint --fix",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
   },
   "devDependencies": {
