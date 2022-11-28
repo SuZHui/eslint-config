@@ -6,4 +6,4 @@ module.exports = {
     '@suzh/eslint-config-typescript',
     '@suzh/eslint-config-react'
   ]
-}
+};

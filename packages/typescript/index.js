@@ -1,4 +1,4 @@
-const ecmascript = require('@suzh/eslint-config-ecmascript')
+const ecmascript = require('@suzh/eslint-config-ecmascript');
 
 /** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
@@ -25,6 +25,7 @@ module.exports = {
       // 'tsc' already handles this
       //  (https://github.com/typescript-eslint/typescript-eslint/issues/291)
       'no-dupe-class-members': 'off',
+      '@typescript-eslint/no-dupe-class-members': 'error',
       // 'tsc' already handles this
       // (https://github.com/typescript-eslint/typescript-eslint/issues/477)
       'no-undef': 'off',
@@ -52,14 +53,6 @@ module.exports = {
           allowTaggedTemplates: true
         }
       ],
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        {
-          args: 'none',
-          ignoreRestSiblings: true
-        }
-      ],
       'no-useless-constructor': 'off',
       '@typescript-eslint/no-useless-constructor': 'error',
       'no-redeclare': 'off',
@@ -71,59 +64,61 @@ module.exports = {
 
       // TS
       '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
-      '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'none' } }],
+      // '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'none' } }],
       '@typescript-eslint/type-annotation-spacing': ['error', {}],
       '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }],
-      '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+      // '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
       '@typescript-eslint/prefer-ts-expect-error': 'error',
 
       // Override JS
-      'no-useless-constructor': 'off',
       'indent': 'off',
-      '@typescript-eslint/indent': ['error', 2, {
-        SwitchCase: 1,
-        VariableDeclarator: 1,
-        outerIIFEBody: 1,
-        MemberExpression: 1,
-        FunctionDeclaration: { parameters: 1, body: 1 },
-        FunctionExpression: { parameters: 1, body: 1 },
-        CallExpression: { arguments: 1 },
-        ArrayExpression: 1,
-        ObjectExpression: 1,
-        ImportDeclaration: 1,
-        flatTernaryExpressions: false,
-        ignoreComments: false,
-        ignoredNodes: [
-          'TemplateLiteral *',
-          'JSXElement',
-          'JSXElement > *',
-          'JSXAttribute',
-          'JSXIdentifier',
-          'JSXNamespacedName',
-          'JSXMemberExpression',
-          'JSXSpreadAttribute',
-          'JSXExpressionContainer',
-          'JSXOpeningElement',
-          'JSXClosingElement',
-          'JSXFragment',
-          'JSXOpeningFragment',
-          'JSXClosingFragment',
-          'JSXText',
-          'JSXEmptyExpression',
-          'JSXSpreadChild',
-          'TSTypeParameterInstantiation',
-          'FunctionExpression > .params[decorators.length > 0]',
-          'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
-          'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key'
-        ],
-        offsetTernaryExpressions: true
-      }],
+      // '@typescript-eslint/indent': ['error', 2, {
+      //   SwitchCase: 1,
+      //   VariableDeclarator: 1,
+      //   outerIIFEBody: 1,
+      //   MemberExpression: 1,
+      //   FunctionDeclaration: { parameters: 1, body: 1 },
+      //   FunctionExpression: { parameters: 1, body: 1 },
+      //   CallExpression: { arguments: 1 },
+      //   ArrayExpression: 1,
+      //   ObjectExpression: 1,
+      //   ImportDeclaration: 1,
+      //   flatTernaryExpressions: false,
+      //   ignoreComments: false,
+      //   ignoredNodes: [
+      //     'TemplateLiteral *',
+      //     'JSXElement',
+      //     'JSXElement > *',
+      //     'JSXAttribute',
+      //     'JSXIdentifier',
+      //     'JSXNamespacedName',
+      //     'JSXMemberExpression',
+      //     'JSXSpreadAttribute',
+      //     'JSXExpressionContainer',
+      //     'JSXOpeningElement',
+      //     'JSXClosingElement',
+      //     'JSXFragment',
+      //     'JSXOpeningFragment',
+      //     'JSXClosingFragment',
+      //     'JSXText',
+      //     'JSXEmptyExpression',
+      //     'JSXSpreadChild',
+      //     'TSTypeParameterInstantiation',
+      //     'FunctionExpression > .params[decorators.length > 0]',
+      //     'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
+      //     'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key'
+      //   ],
+      //   offsetTernaryExpressions: true
+      // }],
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      'no-redeclare': 'off',
-      '@typescript-eslint/no-redeclare': 'error',
-      'no-use-before-define': 'off',
-      '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'none',
+          ignoreRestSiblings: true
+        }
+      ],
+      // '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
       'brace-style': 'off',
       '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: false }],
       // 'comma-dangle': 'off',
@@ -131,9 +126,8 @@ module.exports = {
       'object-curly-spacing': 'off',
       '@typescript-eslint/object-curly-spacing': ['error', 'always'],
       'semi': 'off',
-      '@typescript-eslint/semi': ['error', 'never'],
       'quotes': 'off',
-      '@typescript-eslint/quotes': ['error', 'single'],
+      // '@typescript-eslint/quotes': ['error', 'single'],
       'space-before-blocks': 'off',
       '@typescript-eslint/space-before-blocks': ['error', 'always'],
       'space-before-function-paren': 'off',
@@ -153,8 +147,6 @@ module.exports = {
       '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
       'no-extra-parens': 'off',
       '@typescript-eslint/no-extra-parens': ['error', 'functions'],
-      'no-dupe-class-members': 'off',
-      '@typescript-eslint/no-dupe-class-members': 'error',
       'no-loss-of-precision': 'off',
       '@typescript-eslint/no-loss-of-precision': 'error',
       'lines-between-class-members': 'off',
@@ -185,7 +177,21 @@ module.exports = {
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/ban-types': 'off',
       '@typescript-eslint/no-namespace': 'off',
-      '@typescript-eslint/triple-slash-reference': 'off'
+      '@typescript-eslint/triple-slash-reference': 'off',
+      // use ecmascript
+      '@typescript-eslint/semi': 'off',
+      '@typescript-eslint/member-delimiter-style': [
+        'error',
+        {
+          multiline: { delimiter: 'semi', requireLast: true },
+          singleline: { delimiter: 'semi', requireLast: false },
+          multilineDetection: 'brackets'
+        }
+      ],
+      '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true }],
+      '@typescript-eslint/indent': ['off', 2, { SwitchCase: 1 }],
+      '@typescript-eslint/consistent-type-definitions': 'off',
+      '@typescript-eslint/no-inferrable-types': 'off'
     }
   }]
-}
+};

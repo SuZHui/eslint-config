@@ -1,12 +1,12 @@
 /**
  * 首页轮播图
  */
-import { define, loadImage } from '@hotishop/global'
+import { define, loadImage } from '@hotishop/global';
 
 export class WsCarousel extends HTMLElement {
-  firstImage
-  ratio
-  swiper
+  firstImage;
+  ratio;
+  swiper;
 
   initialize() {
     const {
@@ -25,31 +25,31 @@ export class WsCarousel extends HTMLElement {
       autoHeight = 'false',
       adaptiveHeight = 'false',
       useSlideColor
-    } = this.dataset
+    } = this.dataset;
 
-    const mdSpace = mdSpaceBetween || spaceBetween
-    const lgSpace = lgSpaceBetween || mdSpace
-    const mdSize = mdPageSize || pageSize
-    const lgSize = lgPageSize || mdSize
-    const mdPre = mdSlidesPerGroup || slidesPerGroup
-    const lgPre = lgSlidesPerGroup || mdPre
+    const mdSpace = mdSpaceBetween || spaceBetween;
+    const lgSpace = lgSpaceBetween || mdSpace;
+    const mdSize = mdPageSize || pageSize;
+    const lgSize = lgPageSize || mdSize;
+    const mdPre = mdSlidesPerGroup || slidesPerGroup;
+    const lgPre = lgSlidesPerGroup || mdPre;
 
     if (adaptiveHeight === 'true') {
       // 先写死 500
-      this.style.height = '500px'
+      this.style.height = '500px';
 
-      this.firstImage = this.querySelector('.ws-image')
+      this.firstImage = this.querySelector('.ws-image');
 
       if (this.firstImage) {
         loadImage(
           // 取第一个，不能取 currentSrc，因为可能是 1px
           this.firstImage.dataset.srcset.replace(/\s+\d+w.+$/, '')
         ).then((image) => {
-          this.ratio = image.height / image.width
-          this.onResize()
+          this.ratio = image.height / image.width;
+          this.onResize();
 
-          window.addEventListener('resize', this.onResize)
-        })
+          window.addEventListener('resize', this.onResize);
+        });
       }
     }
 
@@ -88,42 +88,42 @@ export class WsCarousel extends HTMLElement {
           slidesPerGroup: +lgPre
         }
       }
-    })
+    });
 
     if (useSlideColor === 'true') {
-      const [root] = this.swiper.$el
+      const [root] = this.swiper.$el;
       const setColor = () => {
-        const slide = this.swiper.slides[this.swiper.activeIndex]
+        const slide = this.swiper.slides[this.swiper.activeIndex];
 
         if (slide) {
-          const { color } = slide.dataset
+          const { color } = slide.dataset;
 
-          root.style.setProperty('--ws-carousel-color', color)
+          root.style.setProperty('--ws-carousel-color', color);
         }
-      }
+      };
 
-      root.style.color = 'var(--ws-carousel-color)'
+      root.style.color = 'var(--ws-carousel-color)';
 
-      setColor()
-      this.swiper.on('slideChangeTransitionStart', setColor)
+      setColor();
+      this.swiper.on('slideChangeTransitionStart', setColor);
     }
   }
 
   onResize = () => {
     if (this.ratio) {
       this.style.height = `${this.ratio * this.getBoundingClientRect().width
-      }px`
+      }px`;
     }
-  }
+  };
 
   destroy() {
-    window.removeEventListener('resize', this.onResize)
+    window.removeEventListener('resize', this.onResize);
   }
 
   disableSwiper() {
-    this.swiper.destroy()
-    this.swiper = null
+    this.swiper.destroy();
+    this.swiper = null;
   }
 }
 
-define('ws-carousel', WsCarousel)
+define('ws-carousel', WsCarousel);
