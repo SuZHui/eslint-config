@@ -1,4 +1,10 @@
 {
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
   "extends": "@suzh",
   "settings": {
     "react": { "version": "17.0.2" }
