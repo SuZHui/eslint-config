@@ -1,6 +1,6 @@
 {
   "name": "@suzh/eslint-config-monorepo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": true,
   "packageManager": "pnpm@7.13.4",
   "description": "SuZHui's ESLint config presets",
@@ -28,6 +28,6 @@
     "typescript": "4.8.4"
   },
   "engines": {
-		"node": ">=14.17"
-	}
+    "node": ">=14.17"
+  }
 }
