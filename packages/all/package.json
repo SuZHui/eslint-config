@@ -23,7 +23,7 @@
     "@suzh/eslint-config-typescript": "workspace:*",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsonc": "^2.5.0",
-    "eslint-plugin-unicorn": "^44.0.2",
+    "eslint-plugin-unicorn": "42.0.0",
     "jsonc-eslint-parser": "^2.1.0"
   },
   "devDependencies": {
